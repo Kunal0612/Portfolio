@@ -95,7 +95,7 @@ const SocialIcons = (props) => {
           <Linkedin
             width={25}
             height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+            // fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
           />
           <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0
           iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PS

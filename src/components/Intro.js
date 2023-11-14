@@ -46,7 +46,9 @@ display: flex;
     left: 50%;
     transform: translate(-50%,0%);
     width: 100%;
-    height: auto;
+    height: 130%;
+    align-items:center;
+    justify-content:center;
 }
 `
 
@@ -66,9 +68,6 @@ justify-content: space-evenly;
     font-weight:300;
 
 }
-
-
-
 `
 
 const Intro = () => {
