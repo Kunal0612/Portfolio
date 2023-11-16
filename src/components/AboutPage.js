@@ -72,11 +72,12 @@ const AboutPage = () => {
             <img src={astronaut} alt="spaceman" />
         </Spaceman>    
         <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
+        Hello ,My Name is Kunal Shaw ,I Myself a Competitive Programmer and a Full Stack Mern Developer.
 <br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
+I have Solved around 3000+ Problems Combined in all coding platform and Developed Many Frontend and Full stack Mern Projects. 
 <br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
+I think it's our Process and Consistency that what matters  result is just a by product of what you have followed.  
+So let's Connect and Help each other to Grow.
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />
