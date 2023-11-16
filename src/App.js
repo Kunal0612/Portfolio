@@ -11,6 +11,7 @@ import BlogPage from "./components/BlogPage";
 import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 import SoundBar from "./subComponents/SoundBar";
+import Achievement from "./components/Achievement";
 
 function App() {
   const location = useLocation();
@@ -33,11 +34,12 @@ function App() {
 
             <Route path="/about" element={<AboutPage />} />
 
-            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/coding_profile" element={<BlogPage />} />
 
             <Route path="/work" element={<WorkPage />} />
 
             <Route path="/skills" element={<MySkillsPage />} />
+            <Route path="/achievement" element={<Achievement/>} />
             {/* Below is to catch all the other routes and send the user to main component,
 you can add custom 404 component or message instead of Main component*/}
             <Route path="*" element={<Main />} />

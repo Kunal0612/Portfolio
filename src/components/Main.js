@@ -6,8 +6,7 @@ import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import { YinYang } from './AllSvgs'
-import Intro from './Intro'
-;
+import Intro from './Intro';
 
 
 const MainContainer = styled.div`
@@ -73,7 +72,14 @@ text-decoration: none;
 z-index:1;
 `
 const SKILLS = styled(NavLink)`
-color: ${props => props.theme.text};
+color: ${props => props.click ? props.theme.body : props.theme.text};
+text-decoration: none;
+z-index:1;
+`
+const ACHIEVEMENT = styled(NavLink)`
+color: ${props => props.click ? props.theme.body : props.theme.text};
+top: 0.25rem;
+left: calc(1rem + 4vw);
 text-decoration: none;
 z-index:1;
 `
@@ -162,7 +168,7 @@ const Main = () => {
                     Connect With Me..
                 </motion.h2>
             </Contact>
-            <BLOG to="/blog">
+            <BLOG to="/coding_profile">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -227,6 +233,22 @@ const Main = () => {
                     Technicals Skills.
                 </motion.h2>
             </SKILLS>
+            <ACHIEVEMENT to="/achievement">
+                <motion.h2
+                initial={{
+                    y:200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                 whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    Achievement
+                </motion.h2>
+            </ACHIEVEMENT>
 
             </BottomBar>
 
