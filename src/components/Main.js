@@ -6,6 +6,7 @@ import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import { YinYang } from './AllSvgs'
+import { FaLinkedinIn } from "react-icons/fa";
 import Intro from './Intro';
 
 
@@ -77,9 +78,10 @@ text-decoration: none;
 z-index:1;
 `
 const ACHIEVEMENT = styled(NavLink)`
-color: ${props => props.click ? props.theme.body : props.theme.text};
-top: 0.25rem;
-left: calc(1rem + 4vw);
+color: ${props => props.theme.text};
+position: absolute;
+top: 2rem;
+right: calc(15rem + 7vw);
 text-decoration: none;
 z-index:1;
 `
@@ -151,7 +153,7 @@ const Main = () => {
                 <span>click here</span>
             </Center>
 
-            <Contact target="_blank" href="mailto:kunalshaw865@gmail.com">
+            <Contact target="_blank" href="https://www.linkedin.com/in/kunal-shaw-/">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -165,9 +167,25 @@ const Main = () => {
                 whileTap={{scale: 0.9}}
                 
                 >
-                    Connect With Me..
+                    <FaLinkedinIn />
                 </motion.h2>
             </Contact>
+            <ACHIEVEMENT to="/achievement">
+                <motion.h2
+                initial={{
+                    y:200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                 whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    Achievement
+                </motion.h2>
+            </ACHIEVEMENT>
             <BLOG to="/coding_profile">
                 <motion.h2
                 initial={{
@@ -181,7 +199,7 @@ const Main = () => {
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Coding Profiles
+                    Coding Profiles.
                 </motion.h2>
             </BLOG>
             <WORK to="/work" click={+click}>
@@ -197,7 +215,7 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Projects
+                    Projects.
                 </motion.h2>
             </WORK>
             <BottomBar>
@@ -233,22 +251,6 @@ const Main = () => {
                     Technicals Skills.
                 </motion.h2>
             </SKILLS>
-            <ACHIEVEMENT to="/achievement">
-                <motion.h2
-                initial={{
-                    y:200,
-                    transition: { type:'spring', duration: 1.5, delay:1}
-                }}
-                animate={{
-                    y:0,
-                    transition: { type:'spring', duration: 1.5, delay:1}
-                }}
-                 whileHover={{scale: 1.1}}
-                whileTap={{scale: 0.9}}
-                >
-                    Achievement
-                </motion.h2>
-            </ACHIEVEMENT>
 
             </BottomBar>
 
