@@ -93,13 +93,14 @@ const MySkillsPage = () => {
 <ParticleComponent theme='light' />
             <Main>
 <Title>
-    <Develope width={40} height={40} /> Mern Stack Developer
+    Teaching Assistant (CSFORALL)
+    DEC 2023 - Present 
 </Title>
 <Description>
-  A backend Focused Mern Stack Developer !
+  Solving Doubts related to Data Structures and algorithms Problems
 </Description>
 <Description>
-<strong>Skills</strong>
+{/* <strong>Skills</strong>
 <p>
 Html, Css, Javascript, React, Tailwind, Bootstrap, Scss, etc.
 </p>
@@ -108,7 +109,7 @@ Html, Css, Javascript, React, Tailwind, Bootstrap, Scss, etc.
 <strong>Tools</strong>
 <p>
 VScode, Github, Postman , Dev C++ etc.
-</p>
+</p> */}
 </Description>
 
             </Main>

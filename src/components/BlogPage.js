@@ -13,7 +13,7 @@ import { motion } from 'framer-motion'
 
 
 const MainContainer = styled(motion.div)`
-background-image: url(${img});
+background-color: black;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;

@@ -7,7 +7,7 @@ import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 
-import { Work } from "../data/WorkData";
+import { Achieve } from "../data/AchiementData.js";
 import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
@@ -81,7 +81,7 @@ const WorkPage = () => {
         <PowerButton />
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
-          {Work.map((d) => (
+          {Achieve.map((d) => (
             <Card key={d.id} data={d} />
           ))}
         </Main>
@@ -89,7 +89,7 @@ const WorkPage = () => {
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
 
-        <BigTitlte text="Projects" top="10%" right="20%" />
+        <BigTitlte text="ACHIEVEMENTS" top="10%" right="20%" />
       </Box>
     </ThemeProvider>
   );

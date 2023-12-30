@@ -170,7 +170,7 @@ const Main = () => {
                     <FaLinkedinIn />
                 </motion.h2>
             </Contact>
-            <ACHIEVEMENT to="/achievement">
+            <ACHIEVEMENT to="/experience">
                 <motion.h2
                 initial={{
                     y:200,
@@ -183,7 +183,7 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Achievement
+                    Experience
                 </motion.h2>
             </ACHIEVEMENT>
             <BLOG to="/coding_profile">
@@ -251,6 +251,22 @@ const Main = () => {
                     Technicals Skills.
                 </motion.h2>
             </SKILLS>
+            <ACHIEVEMENT to="/achievement">
+                <motion.h2
+                initial={{
+                    y:200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                 whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    Achievement
+                </motion.h2>
+            </ACHIEVEMENT>
 
             </BottomBar>
 
