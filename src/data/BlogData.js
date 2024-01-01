@@ -23,7 +23,7 @@ export const Blogs = [
     {
         id:4,
         name:"Atcoder",
-        tags:["Brown : 7Kyu (698)"],
+        tags:["Brown : 7_Kyu (698)"],
         imgSrc:"https://i.ytimg.com/vi/2kGhxVdSlTQ/mqdefault.jpg",
         link:"https://atcoder.jp/home"
     },
