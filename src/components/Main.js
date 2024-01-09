@@ -36,11 +36,11 @@ right: calc(1rem + 2vw);
 text-decoration: none;
 z-index:1;
 `
-const BLOG = styled(NavLink)`
+const CODING = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
-top: 50%;
-right:1%;
+top: 55%;
+right:-1%;
 transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
 z-index:1;
@@ -78,10 +78,16 @@ text-decoration: none;
 z-index:1;
 `
 const ACHIEVEMENT = styled(NavLink)`
+color: ${props => props.click ? props.theme.body : props.theme.text};
+text-decoration: none;
+z-index:1;
+`
+
+const EXPERIENCE = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
 top: 2rem;
-right: calc(15rem + 7vw);
+right: calc(10rem + 2vw);
 text-decoration: none;
 z-index:1;
 `
@@ -124,7 +130,7 @@ transition: all 1s ease;
 const DarkDiv = styled.div`
 position: absolute;
 top: 0;
-background-color: #000;
+background-color: #1F1717;
 bottom: 0;
 right: 50%;
 width: ${props => props.click ? '50%' : '0%'};
@@ -170,7 +176,7 @@ const Main = () => {
                     <FaLinkedinIn />
                 </motion.h2>
             </Contact>
-            <ACHIEVEMENT to="/experience">
+            <EXPERIENCE to="/experience">
                 <motion.h2
                 initial={{
                     y:200,
@@ -183,10 +189,10 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Experience
+                    Experience.
                 </motion.h2>
-            </ACHIEVEMENT>
-            <BLOG to="/coding_profile">
+            </EXPERIENCE>
+            <CODING to="/coding_profile">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -201,7 +207,7 @@ const Main = () => {
                 >
                     Coding Profiles.
                 </motion.h2>
-            </BLOG>
+            </CODING>
             <WORK to="/work" click={+click}>
                 <motion.h2
                 initial={{
@@ -235,7 +241,7 @@ const Main = () => {
                     About.
                 </motion.h2>
             </ABOUT>
-            <SKILLS to="/skills">
+            <SKILLS to="/skills" click={+click}>
                 <motion.h2
                 initial={{
                     y:200,
@@ -248,7 +254,7 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Technicals Skills.
+                    Skills.
                 </motion.h2>
             </SKILLS>
             <ACHIEVEMENT to="/achievement">
@@ -264,7 +270,7 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Achievement
+                    Achievement.
                 </motion.h2>
             </ACHIEVEMENT>
 

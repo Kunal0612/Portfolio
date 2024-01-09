@@ -97,23 +97,28 @@ const MySkillsPage = () => {
     DEC 2023 - Present 
 </Title>
 <Description>
-  Solving Doubts related to Data Structures and algorithms Problems
+• Served as an Online Teaching Assistant (TA) for multiple DSA and Competitive
+Programming batches, also reviewed their coursework.
+<br/>
+• Collaborated with fellow Team members to improve various Course Materials
 </Description>
-<Description>
-{/* <strong>Skills</strong>
-<p>
-Html, Css, Javascript, React, Tailwind, Bootstrap, Scss, etc.
-</p>
-</Description>
-<Description>
-<strong>Tools</strong>
-<p>
-VScode, Github, Postman , Dev C++ etc.
-</p> */}
-</Description>
+
 
             </Main>
+            <ParticleComponent theme='light' />
+            <Main>
+<Title>
+    Teaching Assistant (Ask Senior)
+    JAN 2024 - Present 
+</Title>
+<Description>
+• Created CP editorials on an "Ask Senior" platform to aid students with concise and clear explanations of competitive programming problems. .
+<br/>
+• Addressed numerous DSA and CP-related queries, offering solutions and clarifications to aid fellow students in their learning journey.
+</Description>
 
+
+            </Main>
             <BigTitle text="SKILLS" top="80%" right="30%" />
 
         </Box>

@@ -8,7 +8,7 @@ import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 
 import { Achieve } from "../data/AchiementData.js";
-import Card from "../subComponents/Card";
+import Carda from "../subComponents/Carda.js";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
 
@@ -82,7 +82,7 @@ const WorkPage = () => {
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
           {Achieve.map((d) => (
-            <Card key={d.id} data={d} />
+            <Carda key={d.id} data={d} />
           ))}
         </Main>
         <Rotate ref={yinyang}>

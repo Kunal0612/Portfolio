@@ -113,6 +113,28 @@ VScode, Github, Postman , Dev C++ etc.
 
             </Main>
 
+            <ParticleComponent theme='light' />
+            <Main>
+<Title>
+    <Develope width={40} height={40} /> DSA Problem Solver
+</Title>
+<Description>
+  Solved around 3000+ Algorithmic Problems in total of all coding platforms!
+</Description>
+<Description>
+<strong>Skills</strong>
+<p>
+C++,C,Python,Java etc.
+</p>
+</Description>
+<Description>
+<strong>Tools</strong>
+<p>
+VScode, Dev C++ etc.
+</p>
+</Description>
+
+            </Main>
             <BigTitle text="SKILLS" top="80%" right="30%" />
 
         </Box>
