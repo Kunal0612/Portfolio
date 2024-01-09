@@ -10,7 +10,7 @@ import AboutPage from "./components/AboutPage";
 import BlogPage from "./components/BlogPage";
 import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
-import SoundBar from "./subComponents/SoundBar";
+// import SoundBar from "./subComponents/SoundBar";
 import Experience from "./components/Experience";
 import Achievement from "./components/Achievements";
 
@@ -21,7 +21,7 @@ function App() {
       <GlobalStyle />
 
       <ThemeProvider theme={lightTheme}>
-        <SoundBar />
+        {/* <SoundBar /> */}
 
         {/* For framer-motion animation on page change! */}
         {/* Changed prop from exitBefore to mode */}
