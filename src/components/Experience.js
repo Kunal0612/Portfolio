@@ -6,7 +6,7 @@ import { Design, Develope} from './AllSvgs';
 
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
-import PowerButton from '../subComponents/PowerButton';
+// import PowerButton from '../subComponents/PowerButton';
 import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
 
@@ -89,7 +89,7 @@ const MySkillsPage = () => {
 
 <LogoComponent theme='light'/>
 <SocialIcons theme='light'/>
-<PowerButton />
+{/* <PowerButton /> */}
 <ParticleComponent theme='light' />
             <Main>
 <Title>

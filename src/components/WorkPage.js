@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
-import PowerButton from "../subComponents/PowerButton";
+// import PowerButton from "../subComponents/PowerButton";
 
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
@@ -78,7 +78,7 @@ const WorkPage = () => {
       <Box>
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
-        <PowerButton />
+        {/* <PowerButton /> */}
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
           {Work.map((d) => (

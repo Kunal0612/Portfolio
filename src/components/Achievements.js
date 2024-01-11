@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
-import PowerButton from "../subComponents/PowerButton";
+// import PowerButton from "../subComponents/PowerButton";
 
 import { Achieve } from "../data/AchiementData.js";
 import Carda from "../subComponents/Carda.js";
@@ -78,7 +78,7 @@ const WorkPage = () => {
       <Box>
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
-        <PowerButton />
+        {/* <PowerButton /> */}
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
           {Achieve.map((d) => (
