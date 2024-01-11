@@ -41,7 +41,7 @@ const ABOUT = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 position: fixed;
-left: 30rem;
+left: 25rem;
 top: 2rem;
 z-index:3;
 `
@@ -50,7 +50,7 @@ const SKILLS = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 position: fixed;
-left: 37rem;
+left: 32rem;
 top: 2rem;
 z-index:3;
 `
@@ -58,7 +58,7 @@ const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 position: fixed;
-left: 44rem;
+left: 39rem;
 top: 2rem;
 z-index:3;
 `
@@ -67,7 +67,7 @@ const CODING = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 position: fixed;
-left: 53rem;
+left: 48rem;
 top: 2rem;
 z-index:3;
 `
@@ -75,7 +75,7 @@ const ACHIEVEMENT = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 position: fixed;
-left: 67rem;
+left: 62rem;
 top: 2rem;
 z-index:3;
 `
@@ -84,7 +84,7 @@ const EXPERIENCE = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 position: fixed;
-left: 79.5rem;
+left: 73.5rem;
 top: 2rem;
 z-index:1;
 `
