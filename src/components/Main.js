@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
+import Home from '../subComponents/Home'
 // import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import { YinYang } from './AllSvgs'
@@ -36,27 +37,62 @@ right: calc(1rem + 2vw);
 text-decoration: none;
 z-index:1;
 `
-const CODING = styled(NavLink)`
-color: ${props => props.theme.text};
-position: absolute;
-top: 55%;
-right:-1%;
-transform: rotate(90deg) translate(-50%, -50%);
+const ABOUT = styled(NavLink)`
+color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
-z-index:1;
+position: fixed;
+left: 30rem;
+top: 2rem;
+z-index:3;
+`
+
+const SKILLS = styled(NavLink)`
+color: ${props => props.click ? props.theme.body : props.theme.text};
+text-decoration: none;
+position: fixed;
+left: 37rem;
+top: 2rem;
+z-index:3;
 `
 const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
-
-position: absolute;
-top: 40%;
-left: calc(1rem + 2vw);
-transform: translate(-50%, -50%) rotate(-90deg) ;
 text-decoration: none;
+position: fixed;
+left: 44rem;
+top: 2rem;
+z-index:3;
+`
+
+const CODING = styled(NavLink)`
+color: ${props => props.click ? props.theme.body : props.theme.text};
+text-decoration: none;
+position: fixed;
+left: 53rem;
+top: 2rem;
+z-index:3;
+`
+const ACHIEVEMENT = styled(NavLink)`
+color: ${props => props.click ? props.theme.body : props.theme.text};
+text-decoration: none;
+position: fixed;
+left: 67rem;
+top: 2rem;
+z-index:3;
+`
+
+const EXPERIENCE = styled(NavLink)`
+color: ${props => props.click ? props.theme.body : props.theme.text};
+text-decoration: none;
+position: fixed;
+left: 79.5rem;
+top: 2rem;
 z-index:1;
 `
 
+
+
 const BottomBar = styled.div`
+color: ${props => props.click ? props.theme.body : props.theme.text};
 position: absolute;
 bottom: 1rem;
 left: 0;
@@ -67,30 +103,7 @@ display: flex;
 justify-content: space-evenly;
 `
 
-const ABOUT = styled(NavLink)`
-color: ${props => props.click ? props.theme.body : props.theme.text};
-text-decoration: none;
-z-index:1;
-`
-const SKILLS = styled(NavLink)`
-color: ${props => props.click ? props.theme.body : props.theme.text};
-text-decoration: none;
-z-index:1;
-`
-const ACHIEVEMENT = styled(NavLink)`
-color: ${props => props.click ? props.theme.body : props.theme.text};
-text-decoration: none;
-z-index:1;
-`
 
-const EXPERIENCE = styled(NavLink)`
-color: ${props => props.theme.text};
-position: absolute;
-top: 2rem;
-right: calc(10rem + 2vw);
-text-decoration: none;
-z-index:1;
-`
 
 const rotate = keyframes`
 from{
@@ -133,12 +146,11 @@ top: 0;
 background-color: #1F1717;
 bottom: 0;
 right: 50%;
-width: ${props => props.click ? '50%' : '0%'};
+width: ${props => props.click ? '100%' : '0%'};
 height: ${props => props.click ? '100%' : '0%'};
 z-index:1;
 transition: height 0.5s ease, width 1s ease 0.5s;
 `
-
 
 const Main = () => {
 
@@ -148,21 +160,38 @@ const Main = () => {
 
     return (
         <MainContainer>
-         <DarkDiv   click={click}/>
+            <DarkDiv   click={click} />
             <Container>
             {/* <PowerButton /> */}
             <LogoComponent theme={click ? 'dark' :'light'}/>
+            {/* <Home theme={click ? 'dark' :'light'}/> */}
             <SocialIcons theme={click ? 'dark' :'light'} />
            
             <Center click={click}>
                 <YinYang  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                <span>click here</span>
+                <span>Show Portfolio</span>
             </Center>
 
-            <Contact target="_blank" href="https://www.linkedin.com/in/kunal-shaw-/">
+            <Contact target="_blank" href="https://www.linkedin.com/in/kunal-shaw-/" >
                 <motion.h2
                 initial={{
-                    y:-200,
+                    y:-150,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    <FaLinkedinIn />
+                </motion.h2>
+            </Contact>
+            <EXPERIENCE to="/experience" >
+            <motion.h2
+                initial={{
+                    y:-150,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 animate={{
@@ -173,29 +202,13 @@ const Main = () => {
                 whileTap={{scale: 0.9}}
                 
                 >
-                    <FaLinkedinIn />
-                </motion.h2>
-            </Contact>
-            <EXPERIENCE to="/experience">
-                <motion.h2
-                initial={{
-                    y:200,
-                    transition: { type:'spring', duration: 1.5, delay:1}
-                }}
-                animate={{
-                    y:0,
-                    transition: { type:'spring', duration: 1.5, delay:1}
-                }}
-                 whileHover={{scale: 1.1}}
-                whileTap={{scale: 0.9}}
-                >
                     Experience.
                 </motion.h2>
             </EXPERIENCE>
-            <CODING to="/coding_profile">
+            <CODING to="/coding_profile" >
                 <motion.h2
                 initial={{
-                    y:-200,
+                    y:-150,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 animate={{
@@ -211,7 +224,7 @@ const Main = () => {
             <WORK to="/work" click={+click}>
                 <motion.h2
                 initial={{
-                    y:-200,
+                    y:-150,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 animate={{
@@ -226,17 +239,18 @@ const Main = () => {
             </WORK>
             <BottomBar>
             <ABOUT to="/about" click={+click}>
-                <motion.h2
+            <motion.h2
                 initial={{
-                    y:200,
+                    y:-150,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 animate={{
                     y:0,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
-                 whileHover={{scale: 1.1}}
+                whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
+                
                 >
                     About.
                 </motion.h2>
@@ -244,30 +258,31 @@ const Main = () => {
             <SKILLS to="/skills" click={+click}>
                 <motion.h2
                 initial={{
-                    y:200,
+                    y:-150,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 animate={{
                     y:0,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
-                 whileHover={{scale: 1.1}}
+                whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
+                
                 >
                     Skills.
                 </motion.h2>
             </SKILLS>
-            <ACHIEVEMENT to="/achievement">
-                <motion.h2
+            <ACHIEVEMENT to="/achievement" >
+            <motion.h2
                 initial={{
-                    y:200,
+                    y:-150,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 animate={{
                     y:0,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
-                 whileHover={{scale: 1.1}}
+                whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
                     Achievement.

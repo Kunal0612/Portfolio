@@ -88,7 +88,6 @@ const WorkPage = () => {
         <Rotate ref={yinyang}>
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
-
         <BigTitlte text="Projects" top="10%" right="20%" />
       </Box>
     </ThemeProvider>
