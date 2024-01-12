@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import img from "../assets/Images/Profile.jpg"
+// import img from "../assets/Images/Profile.jpg"
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons  from '../subComponents/SocialIcons'
 // import PowerButton  from '../subComponents/PowerButton'
 
 import {Blogs} from '../data/BlogData';
 import BlogComponent from './BlogComponent'
-import AnchorComponent from '../subComponents/Anchor'
+// import AnchorComponent from '../subComponents/Anchor'
 import BigTitle from "../subComponents/BigTitlte"
 import { motion } from 'framer-motion'
 
@@ -79,7 +79,7 @@ const BlogPage = () => {
                 <LogoComponent />
                 {/* <PowerButton /> */}
                 <SocialIcons />
-                <AnchorComponent number={numbers}/>
+                {/* <AnchorComponent number={numbers}/> */}
 <Center>
 <Grid>
 
