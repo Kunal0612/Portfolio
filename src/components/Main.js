@@ -8,7 +8,7 @@ import Home from "../subComponents/Home";
 import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import { FaLinkedinIn } from "react-icons/fa";
-import { IoMenu } from "react-icons/io5";
+import { TiThMenu } from "react-icons/ti";
 import Intro from "./Intro";
 
 const MainContainer = styled.div`
@@ -32,6 +32,17 @@ const MainContainer = styled.div`
 const Container = styled.div`
   padding: 2rem;
 `;
+const Navright = styled.div`
+color: ${(props) => props.theme.text};
+position: absolute;
+top: 2rem;
+right: calc(4rem + 2vw);
+text-decoration: none;
+z-index: 5;
+@media (min-width: 1300px) {
+  display:none;
+}
+`;
 
 
 
@@ -50,6 +61,9 @@ const ABOUT = styled(NavLink)`
   left: 25rem;
   top: 2rem;
   z-index: 3;
+  @media (max-width: 1300px) {
+    display:none;
+  }
 `;
 
 const SKILLS = styled(NavLink)`
@@ -59,6 +73,9 @@ const SKILLS = styled(NavLink)`
   left: 32rem;
   top: 2rem;
   z-index: 3;
+  @media (max-width: 1300px) {
+    display:none;
+  }
 `;
 const WORK = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
@@ -67,6 +84,9 @@ const WORK = styled(NavLink)`
   left: 39rem;
   top: 2rem;
   z-index: 3;
+  @media (max-width: 1300px) {
+    display:none;
+  }
 `;
 
 const CODING = styled(NavLink)`
@@ -76,6 +96,9 @@ const CODING = styled(NavLink)`
   left: 48rem;
   top: 2rem;
   z-index: 3;
+  @media (max-width: 1300px) {
+    display:none;
+  }
 `;
 const ACHIEVEMENT = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
@@ -84,6 +107,9 @@ const ACHIEVEMENT = styled(NavLink)`
   left: 62rem;
   top: 2rem;
   z-index: 3;
+  @media (max-width: 1300px) {
+    display:none;
+  }
 `;
 
 const EXPERIENCE = styled(NavLink)`
@@ -93,6 +119,9 @@ const EXPERIENCE = styled(NavLink)`
   left: 73.5rem;
   top: 2rem;
   z-index: 1;
+  @media (max-width: 1300px) {
+    display:none;
+  }
 `;
 
 const BottomBar = styled.div`
@@ -178,6 +207,22 @@ const Main = () => {
           />
           <span>Show Portfolio</span>
         </Center>
+        <Navright onClick={toggleMenu}>
+        <motion.h2
+            initial={{
+              y: -150,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <TiThMenu />
+          </motion.h2>
+        </Navright>
         <Contact
           target="_blank"
           href="https://www.linkedin.com/in/kunal-shaw-/"
@@ -294,9 +339,7 @@ const Main = () => {
               Achievement.
             </motion.h2>
           </ACHIEVEMENT>
-          {/* <span className="hidden" onClick={toggleMenu}>
-            <IoMenu />
-        </span> */}
+          
         </BottomBar>
       </Container>
       {click ? <Intro click={click} /> : null}
