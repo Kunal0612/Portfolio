@@ -18,8 +18,6 @@ position: relative;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-
-
 `
 
 const Main = styled.div`
@@ -32,17 +30,16 @@ height: 60vh;
 z-index:3;
 line-height: 1.5;
 cursor: pointer;
-
 font-family: 'Ubuntu Mono',monospace;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-
 &:hover{
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
 }
 `
+
 
 const Title = styled.h2`
 display: flex;
@@ -73,12 +70,24 @@ ${Main}:hover &{
     
 }
 
+
+
 strong{
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 ul,p{
     margin-left: 2rem;
+}
+li{
+    ::marker {
+        unicode-bidi: isolate;
+        font-variant-numeric: tabular-nums;
+        text-transform: none;
+        text-indent: 0px !important;
+        text-align: start !important;
+        text-align-last: start !important;
+    }
 }
 `
 
@@ -92,6 +101,7 @@ const MySkillsPage = () => {
 {/* <PowerButton /> */}
 <ParticleComponent theme='light' />
             <Main>
+
 <Title>
     Teaching Assistant (CSFORALL)
     DEC 2023 - Present 
@@ -112,7 +122,7 @@ Programming batches, also reviewed their coursework.
     JAN 2024 - Present 
 </Title>
 <Description>
-• Created CP editorials on an "Ask Senior" platform to aid students with concise and clear explanations of competitive programming problems. .
+• Created CP editorials on an "Ask Senior" platform to aid students with concise and clear explanations of competitive programming problems.
 <br/>
 • Addressed numerous DSA and CP-related queries, offering solutions and clarifications to aid fellow students in their learning journey.
 </Description>

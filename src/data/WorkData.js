@@ -14,8 +14,8 @@ export const Work = [
         description:"A Doctor appointment booking web app where patient can book doctors for their checkups.",
         tags:["react","gsap","styledComponents"],
         
-        demo:"https://medicare-rho-ebon.vercel.app/",
-        github:"hhttps://github.com/Kunal0612/Medicare"
+        demo:"https://medci-frontend.vercel.app/",
+        github:"https://github.com/Kunal0612/Hacktivist_MEDCI"
     },
     {
         id:3,

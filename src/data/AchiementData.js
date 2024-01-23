@@ -7,10 +7,17 @@ export const Achieve = [
         demo:"https://drive.google.com/file/d/16tvNmTxglE7z_sEw-Ngg_N373_svWeuH/view",
     },
     {
-        id:1,
+        id:2,
         name:"ACM ICPC AMRITAPURI",
         description:"Our team has secured a rank of 1103th in Amritapuri Regionals round which is first in our College : Netaji Subhash Engineering College",
         tags:["Competitive Programming","DSA"],
         demo:"https://drive.google.com/file/d/1aqSKX3oUXsccgvutRkFg40U-tOOyeBqC/view",
+    },
+    {
+        id:3,
+        name:"PW Hiring Coding Contest",
+        description:"Secured a rank of AIR 22 / 5k+ Participants in it.",
+        tags:["Competitive Programming","DSA"],
+        demo:"https://drive.google.com/file/d/1kImwyvJ3XcKNhVKNEXWWZQBNaqsNSZG6/view?usp=drive_link",
     },
 ] 
