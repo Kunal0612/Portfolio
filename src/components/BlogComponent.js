@@ -23,6 +23,12 @@ const Box = styled(motion.a)`
     background-color: ${(props) => props.theme.text};
     transition: all 0.3s ease;
   }
+  @media(max-width:30em){
+    height:18rem;
+  }
+  @media(max-width:50em){
+    width:calc(60vw);
+  }
 `;
 
 const Image = styled.div`
@@ -47,6 +53,9 @@ const Title = styled.h3`
 
   ${Box}:hover & {
     border-bottom: 1px solid ${(props) => props.theme.body};
+  }
+  @media(max-width:40em){
+    font-size:calc(0.8em + 1vw);
   }
 `;
 const HashTags = styled.div`

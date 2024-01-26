@@ -17,7 +17,7 @@ background-color: black;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
-background-position: center;
+background-position: center-center;
 `
 const Container = styled.div`
 background-color: ${props => `rgba(${props.theme.bodyRgba},0.8)`};
@@ -26,6 +26,9 @@ height:auto;
 
 position: relative;
 padding-bottom: 5rem;
+@media (max-width:30em){
+    padding-bottom:7rem;
+}
 `
 
 const Center = styled.div`
@@ -39,6 +42,9 @@ const Grid = styled.div`
 display: grid;
 grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
 grid-gap: calc(1rem + 2vw);
+@media (max-width:50em){
+    grid-template-columns:100%;
+}
 `
 
 // Framer-motion config
