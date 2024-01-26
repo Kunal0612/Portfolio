@@ -17,6 +17,11 @@ const Box = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 1300px){
+    flex-direction: column;
+    padding: 8rem 0px;
+    height: auto;
+  }
 `;
 
 const Main = styled.div`
@@ -27,7 +32,6 @@ const Main = styled.div`
   width: 30vw;
   height: 60vh;
   z-index: 3;
-  line-height: 1.5;
   cursor: pointer;
 
   font-family: "Ubuntu Mono", monospace;
@@ -37,6 +41,20 @@ const Main = styled.div`
   &:hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.text};
+  }
+  @media (max-width: 30em)> :nth-child(5) {
+    margin-bottom: 4rem;
+  }
+  @media (max-width: 50em)> :nth-child(5) {
+    margin-bottom: 5rem;
+  }
+  @media (max-width: 60rem){
+    width: 50vw;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 4rem;
   }
 
 `;
@@ -55,6 +73,11 @@ const Title = styled.h2`
 
   & > *:first-child {
     margin-right: 1rem;
+  }
+  @media (max-width: 1300px){
+    font-size: calc(1em + 2vw);
+    margin-bottom: 1rem 
+    margin:0;
   }
 `;
 
