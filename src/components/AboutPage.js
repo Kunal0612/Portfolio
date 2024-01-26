@@ -27,7 +27,6 @@ const Spaceman = styled.div`
   top: 12%;
   right: 2%;
   width: 20vw;
-  
   img {
     width: 100%;
     height: auto;
@@ -87,7 +86,7 @@ const AboutPage = () => {
           I have Solved around 3000+ Problems Combined in all coding platform
           and Developed Many Frontend and Full stack Mern Projects.
           <br /> <br />I think it's our Process and Consistency that what
-          matters result is just a by product of what you have followed. So
+          matters and on that we should focus on result is just a by product of what you have followed. So
           let's Connect and Help each other to Grow.
         </Main>
 

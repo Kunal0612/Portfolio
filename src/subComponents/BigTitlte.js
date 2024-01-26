@@ -10,7 +10,9 @@ right: ${props => props.right};
 color:${props => `rgba(${props.theme.textRgba},0.1)`};
 font-size: calc(5rem + 5vw);
 z-index:0;
-
+@media (max-width:400){
+    font-size: 0rem;
+}
 `
 
 
