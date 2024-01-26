@@ -18,6 +18,11 @@ position: relative;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+@media (max-width: 1300px){
+    flex-direction: column;
+    padding: 8rem 0px;
+    height: auto;
+  }
 `
 
 const Main = styled.div`
@@ -38,6 +43,21 @@ justify-content: space-between;
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
 }
+@media (max-width: 30em)> :nth-child(5) {
+    margin-bottom: 4rem;
+  }
+  @media (max-width: 50em)> :nth-child(5) {
+    margin-bottom: 5rem;
+  }
+  @media (max-width: 60rem){
+    width: 50vw;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+
 `
 
 
@@ -56,6 +76,10 @@ ${Main}:hover &{
 &>*:first-child{
 margin-right: 1rem;
 }
+@media (max-width: 1300px){
+    font-size: calc(1em + 2vw);
+    margin-bottom: 1rem 
+  }
 `
 
 const Description = styled.div`
