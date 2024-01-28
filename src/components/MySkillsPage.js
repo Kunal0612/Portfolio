@@ -2,6 +2,8 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme } from "./Themes";
 import { Design, Develope } from "./AllSvgs";
+import { FaLinkedinIn } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
@@ -59,6 +61,15 @@ const Main = styled.div`
 
 `;
 
+const Contact = styled.a`
+  color: ${(props) => props.theme.text};
+  position: absolute;
+  top: 2rem;
+  right: calc(4rem + 2vw);
+  text-decoration: none;
+  z-index: 1;
+`;
+
 const Title = styled.h2`
   display: flex;
   justify-content: center;
@@ -103,6 +114,25 @@ const Description = styled.div`
 const MySkillsPage = () => {
   return (
     <ThemeProvider theme={lightTheme}>
+      <Contact
+          target="_blank"
+          href="https://www.linkedin.com/in/kunal-shaw-/"
+        >
+          <motion.h2
+            initial={{
+              y: -150,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaLinkedinIn />
+          </motion.h2>
+        </Contact>
       <Box>
         <LogoComponent theme="light" />
         <SocialIcons theme="light" />

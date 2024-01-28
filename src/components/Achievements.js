@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { DarkTheme } from "./Themes";
-import { motion } from "framer-motion";
-
+import { FaLinkedinIn } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 // import PowerButton from "../subComponents/PowerButton";
@@ -19,6 +19,15 @@ const Box = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+`;
+
+const Contact = styled.a`
+  color: ${(props) => props.theme.text};
+  position: absolute;
+  top: 2rem;
+  right: calc(4rem + 2vw);
+  text-decoration: none;
+  z-index: 1;
 `;
 
 const Main = styled(motion.ul)`
@@ -76,6 +85,25 @@ const WorkPage = () => {
 
   return (
     <ThemeProvider theme={DarkTheme}>
+      <Contact
+          target="_blank"
+          href="https://www.linkedin.com/in/kunal-shaw-/"
+        >
+          <motion.h2
+            initial={{
+              y: -150,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaLinkedinIn />
+          </motion.h2>
+        </Contact>
       <Box>
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />

@@ -152,7 +152,10 @@ const Center = styled.button`
   outline: none;
   background-color: transparent;
   cursor: pointer;
-
+  @media (max-width: 1300px) {
+    top: ${(props) => (props.click ? "92.5%" : "50%")};
+    left: ${(props) => (props.click ? "85%" : "50%")};
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,6 +182,14 @@ const DarkDiv = styled.div`
   height: ${(props) => (props.click ? "100%" : "0%")};
   z-index: 1;
   transition: height 0.5s ease, width 1s ease 0.5s;
+  @media (max-width: 50em){
+    height: 50%;
+    right: 0px;
+    width: 100%;
+    width: ${(props) => (props.click ? "100%" : "0%")};
+  height: ${(props) => (props.click ? "50%" : "0%")};
+    transition: width 0.5s ease 0s, height 1s ease 0.5s;
+  }
 `;
 
 const Main = () => {
@@ -206,9 +217,7 @@ const Main = () => {
   };
 
   const [click, setClick] = useState(false);
-  const [cen, setCen] = useState(false);
   const handleClick = () => setClick(!click);
-  const handleCen = () => setCen(!cen);
   return (
     <MainContainer>
       <Navright onClick={isOpen}>
@@ -225,7 +234,7 @@ const Main = () => {
           whileTap={{ scale: 0.9 }}
         >
           {open && click && setClick(!click)}
-          <TiThMenu/>
+          <TiThMenu />
         </motion.h2>
       </Navright>
       <AnimatePresence>
@@ -343,7 +352,7 @@ const Main = () => {
       <DarkDiv click={click} />
       <Container>
         <LogoComponent theme={click ? "dark" : "light"} />
-        <SocialIcons theme={click ? "dark" : "light"} />
+        <SocialIcons  />
 
         <Center click={click}>
           {!open && (

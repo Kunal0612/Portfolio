@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { DarkTheme } from "./Themes";
-import { motion } from "framer-motion";
+import { FaLinkedinIn } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
@@ -12,6 +13,15 @@ import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
 
+
+const Contact = styled.a`
+  color: ${(props) => props.theme.text};
+  position: absolute;
+  top: 2rem;
+  right: calc(4rem + 2vw);
+  text-decoration: none;
+  z-index: 1;
+`;
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
 

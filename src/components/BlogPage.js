@@ -9,8 +9,17 @@ import {Blogs} from '../data/BlogData';
 import BlogComponent from './BlogComponent'
 // import AnchorComponent from '../subComponents/Anchor'
 import BigTitle from "../subComponents/BigTitlte"
-import { motion } from 'framer-motion'
+import { FaLinkedinIn } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
+const Contact = styled.a`
+  color: ${(props) => props.theme.text};
+  position: absolute;
+  top: 2rem;
+  right: calc(4rem + 2vw);
+  text-decoration: none;
+  z-index: 1;
+`;
 
 const MainContainer = styled(motion.div)`
 background-color: black;
@@ -81,6 +90,25 @@ const BlogPage = () => {
             opacity:0, transition:{duration: 0.5}
         }}
         >
+            <Contact
+          target="_blank"
+          href="https://www.linkedin.com/in/kunal-shaw-/"
+        >
+          <motion.h2
+            initial={{
+              y: -150,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaLinkedinIn />
+          </motion.h2>
+        </Contact>
             <Container>
                 <LogoComponent />
                 {/* <PowerButton /> */}
