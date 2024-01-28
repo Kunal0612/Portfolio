@@ -1,5 +1,5 @@
-import React, {  useState } from "react";
-import {  NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 // import PowerButton from '../subComponents/PowerButton'
@@ -208,22 +208,9 @@ const Main = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   return (
+    
     <MainContainer>
-      <DarkDiv click={click} />
-      <Container>
-        <LogoComponent theme={click ? "dark" : "light"} />
-        <SocialIcons theme={click ? "dark" : "light"} />
-
-        <Center click={click}>
-          <YinYang
-            onClick={() => handleClick()}
-            width={click ? 120 : 200}
-            height={click ? 120 : 200}
-            fill="currentColor"
-          />
-          <span>Show Portfolio</span>
-        </Center>
-        <Navright onClick={isOpen}>
+      <Navright onClick={isOpen}>
           <motion.h2
             initial={{
               y: -150,
@@ -253,7 +240,7 @@ const Main = () => {
               <TiThMenu />
               </div>
               <motion.a
-              href="/about"
+                href="/about"
                 initial={{ y: 80, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.8 }}
@@ -351,6 +338,21 @@ const Main = () => {
             </motion.div>
           )}
         </AnimatePresence>
+      <DarkDiv click={click} />
+      <Container>
+        <LogoComponent theme={click ? "dark" : "light"} />
+        <SocialIcons theme={click ? "dark" : "light"} />
+
+        <Center click={click}>
+          <YinYang
+            onClick={() => handleClick()}
+            width={click ? 120 : 200}
+            height={click ? 120 : 200}
+            fill="currentColor"
+          />
+          <span>Show Portfolio</span>
+        </Center>
+        
         <Contact
           target="_blank"
           href="https://www.linkedin.com/in/kunal-shaw-/"

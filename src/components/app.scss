@@ -1,6 +1,6 @@
 *{
   margin:0;
-  padding:0;
+  padding:0
 }
 
 
@@ -22,20 +22,20 @@
   width:100%;
   height:calc(100vh - 60px );  
 }
-header{
-  @extend .dflex;
-  justify-content: flex-end;
-  width:100%;
-  height:58px;
-  border-bottom:1px solid #bdbdbd;
-  padding:0 50px;
-  .menu{
-    width:58px;
-    height:58px;
-    @extend .dflex;
-    cursor:pointer;
-  }
-}
+// header{
+//   @extend .dflex;
+//   justify-content: flex-end;
+//   width:100%;
+//   height:58px;
+//   border-bottom:1px solid #bdbdbd;
+//   padding:0 50px;
+//   .menu{
+//     width:58px;
+//     height:58px;
+//     @extend .dflex;
+//     cursor:pointer;
+//   }
+// }
 .menu_container{
   position:absolute;
   width:100%;
@@ -68,8 +68,8 @@ header{
     color:#000;
     border-radius: 58px;
     position:absolute;
-    top:20px;
-    right:20px;
+    top: 2rem;
+    right: calc(1rem + 2vw);
     z-index:2;
     cursor:pointer;
     font-size:18px;
