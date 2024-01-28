@@ -39,6 +39,17 @@ const Main = styled(motion.ul)`
   display: flex;
 
   color: white;
+  @media (max-width: 40em){
+    left: calc(2rem + 15vw);
+}
+
+@media (max-width: 40em){
+    top: 30%;
+    left: calc(6rem + 15vw);
+}
+@media (max-width: 50em){
+    left: calc(8rem + 15vw);
+}
 `;
 const Rotate = styled.span`
   display: block;
@@ -98,7 +109,7 @@ const WorkPage = () => {
         <Rotate ref={yinyang}>
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
-        <BigTitlte text="Projects" top="10%" right="20%" />
+        <BigTitlte text="Projects" top="9%" right="10%" />
       </Box>
     </ThemeProvider>
   );

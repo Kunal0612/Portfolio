@@ -38,7 +38,6 @@ const Main = styled.div`
   font-family: "Ubuntu Mono", monospace;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   &:hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.text};
@@ -51,13 +50,21 @@ const Main = styled.div`
   }
   @media (max-width: 60rem) {
     width: 50vw;
-    height: 350px;
+    height: 330px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 4rem;
   }
 `;
+const Grid = styled.div`
+display: grid;
+grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
+grid-gap: calc(1rem + 2vw);
+@media (max-width:50em){
+    grid-template-columns:100%;
+}
+`
 
 const Title = styled.h2`
   display: flex;
@@ -144,6 +151,7 @@ const MySkillsPage = () => {
         <SocialIcons theme="light" />
         {/* <PowerButton /> */}
         <ParticleComponent theme="light" />
+        <Grid>
         <Main>
           <Title>Teaching Assistant (CSFORALL) DEC 2023 - Present</Title>
           <Description>
@@ -153,19 +161,20 @@ const MySkillsPage = () => {
             Course Materials
           </Description>
         </Main>
-        <ParticleComponent theme="light" />
         <Main>
           <Title>Teaching Assistant (Ask Senior) JAN 2024 - Present</Title>
           <Description>
             • Created CP editorials on an "Ask Senior" platform to aid students
             with concise and clear explanations of competitive programming
             problems.
-            <br />• Addressed numerous DSA and CP-related queries, offering
+            <br />
+            • Addressed numerous DSA and CP-related queries, offering
             solutions and clarifications to aid fellow students in their
             learning journey.
           </Description>
         </Main>
-        <BigTitle text="SKILLS" top="80%" right="30%" />
+        </Grid>
+        <BigTitle text="Experience" top="4%" right="-1%" />
       </Box>
     </ThemeProvider>
   );

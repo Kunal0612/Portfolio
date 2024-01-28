@@ -48,7 +48,7 @@ const Main = styled.div`
   color: ${(props) => props.theme.text};
   padding: 2rem;
   width: 50vw;
-  height: 60vh;
+  height: 63vh;
   z-index: 3;
   line-height: 1.5;
   display: flex;
@@ -109,14 +109,13 @@ const AboutPage = () => {
           <img src={astronaut} alt="spaceman" />
         </Spaceman>
         <Main>
-          Hello ,My Name is Kunal Shaw ,I Myself a Competitive Programmer and a
-          Full Stack Mern Developer.
+          Hello, I'm Kunal Shaw, a passionate Competitive Programmer and Full Stack MERN Developer. 
           <br /> <br />
-          I have Solved around 3000+ Problems Combined in all coding platform
-          and Developed Many Frontend and Full stack Mern Projects.
+          With a track record of solving over 3000 problems across various coding platforms, I've honed my problem-solving skills. Additionally, I have hands-on experience developing numerous Frontend and Full Stack MERN projects.
           <br /> <br />I think it's our Process and Consistency that what
-          matters and on that we should focus on result is just a by product of what you have followed. So
-          let's Connect and Help each other to Grow.
+          matters and on that we should focus on result is just a by product of what you have followed.
+          <br /> <br /> 
+          So let's Connect on Linkedin and Help each other to Grow.
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />

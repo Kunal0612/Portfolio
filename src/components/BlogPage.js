@@ -125,7 +125,7 @@ const BlogPage = () => {
 </Grid>
 
 </Center>
-<BigTitle text="CODING PROFILES" top="5rem" left="5rem" />
+<BigTitle text="CODING PROFILES" top="5rem" left="4rem" />
             </Container>
         </MainContainer>
     )

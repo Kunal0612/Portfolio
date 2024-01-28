@@ -24,7 +24,17 @@ transition: all 0.2s ease;
 background-color: ${props => props.theme.body};
 color:${props => props.theme.text};
 border: 1px solid ${props => props.theme.text};
+}
+@media (max-width: 40em){
+    width: 14rem;
+    margin-right: 4rem;
+    height: 35vh;
+}
 
+@media (max-width: 50em){
+    width: 16rem;
+    margin-right: 6rem;
+    height: 35vh;
 }
 `
 const Title = styled.h2`

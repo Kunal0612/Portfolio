@@ -96,7 +96,6 @@ const Description = styled.div`
   color: ${(props) => props.theme.text};
   font-size: calc(0.6em + 1vw);
   padding: 0.5rem 0;
-
   ${Main}:hover & {
     color: ${(props) => props.theme.body};
   }
@@ -142,39 +141,39 @@ const MySkillsPage = () => {
           <Title>
             <Develope width={40} height={40} /> Mern Stack Developer
           </Title>
-          <Description>A backend Focused Mern Stack Developer !</Description>
+          <Description >A Full Stack Mern Developer !</Description>
           <Description>
             <strong>Skills</strong>
             <p>
               Html, Css, Javascript, React, Tailwind, Bootstrap, Scss, Node js,
-              Express Js etc.
+              Express Js, Numpy, Pandas etc.
             </p>
           </Description>
           <Description>
             <strong>Tools</strong>
-            <p>VScode, Github,Mongo DB, Postman , Dev C++ etc.</p>
+            <p>VScode, Github, Mongo DB, Postman, Dev C++,  etc.</p>
           </Description>
         </Main>
 
         <ParticleComponent theme="light" />
         <Main>
           <Title>
-            <Develope width={40} height={40} /> DSA Problem Solver
+            <Develope width={40} height={40} /> Competitive Programmer 
           </Title>
           <Description>
             Solved around 3000+ Algorithmic Problems in total of all coding
-            platforms!
+            platforms !
           </Description>
           <Description>
             <strong>Skills</strong>
-            <p>C++,C,Python,Java etc.</p>
+            <p>C++ ,C ,Python ,Java etc.</p>
           </Description>
           <Description>
             <strong>Tools</strong>
             <p>VScode, Dev C++ etc.</p>
           </Description>
         </Main>
-        <BigTitle text="SKILLS" top="80%" right="30%" />
+        <BigTitle text="SKILLS" top="5%" right="30%" />
       </Box>
     </ThemeProvider>
   );
