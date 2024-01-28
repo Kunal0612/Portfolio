@@ -206,153 +206,157 @@ const Main = () => {
   };
 
   const [click, setClick] = useState(false);
+  const [cen, setCen] = useState(false);
   const handleClick = () => setClick(!click);
+  const handleCen = () => setCen(!cen);
   return (
-    
     <MainContainer>
       <Navright onClick={isOpen}>
-          <motion.h2
-            initial={{
-              y: -150,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+        <motion.h2
+          initial={{
+            y: -150,
+            transition: { type: "spring", duration: 1.5, delay: 1 },
+          }}
+          animate={{
+            y: 0,
+            transition: { type: "spring", duration: 1.5, delay: 1 },
+          }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          {open && click && setClick(!click)}
+          <TiThMenu/>
+        </motion.h2>
+      </Navright>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="menu_container"
+            variants={item}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "100vh", opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            exit="exit"
           >
-            <TiThMenu />
-          </motion.h2>
-        </Navright>
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              className="menu_container"
-              variants={item}
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "100vh", opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              exit="exit"
-            >
-              <div className="btn_close" onClick={closeMenu}>
+            <div className="btn_close" onClick={closeMenu}>
               <TiThMenu />
-              </div>
-              <motion.a
-                href="/about"
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.8 }}
-                exit={{
-                  opacity: 0,
-                  y: 90,
-                  transition: {
-                    ease: "easeInOut",
-                    delay: 1,
-                  },
-                }}
-              >
-                About.
-              </motion.a>
-              <motion.a
-                href="/skills"
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.7 }}
-                exit={{
-                  opacity: 0,
-                  y: 90,
-                  transition: {
-                    ease: "easeInOut",
-                    delay: 0.8,
-                  },
-                }}
-              >
-                Skills.
-              </motion.a>
-              <motion.a
-                href="/work"
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                exit={{
-                  opacity: 0,
-                  y: 90,
-                  transition: {
-                    ease: "easeInOut",
-                    delay: 0.6,
-                  },
-                }}
-              >
-                Projects.
-              </motion.a>
-              <motion.a
-                href="/coding_profile"
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                exit={{
-                  opacity: 0,
-                  y: 90,
-                  transition: {
-                    ease: "easeInOut",
-                    delay: 0.4,
-                  },
-                }}
-              >
-                Coding Profiles.
-              </motion.a>
-              <motion.a
-                href="/achievement"
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                exit={{
-                  opacity: 0,
-                  y: 90,
-                  transition: {
-                    ease: "easeInOut",
-                    delay: 0.2,
-                  },
-                }}
-              >
-                Achievement.
-              </motion.a>
-              <motion.a
-                href="/experience"
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                exit={{
-                  opacity: 0,
-                  y: 90,
-                  transition: {
-                    ease: "easeInOut",
-                    delay: 0.2,
-                  },
-                }}
-              >
-                Experience.
-              </motion.a>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </div>
+            <motion.a
+              href="/about"
+              initial={{ y: 80, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              exit={{
+                opacity: 0,
+                y: 90,
+                transition: {
+                  ease: "easeInOut",
+                  delay: 1,
+                },
+              }}
+            >
+              About.
+            </motion.a>
+            <motion.a
+              href="/skills"
+              initial={{ y: 80, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.7 }}
+              exit={{
+                opacity: 0,
+                y: 90,
+                transition: {
+                  ease: "easeInOut",
+                  delay: 0.8,
+                },
+              }}
+            >
+              Skills.
+            </motion.a>
+            <motion.a
+              href="/work"
+              initial={{ y: 80, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              exit={{
+                opacity: 0,
+                y: 90,
+                transition: {
+                  ease: "easeInOut",
+                  delay: 0.6,
+                },
+              }}
+            >
+              Projects.
+            </motion.a>
+            <motion.a
+              href="/coding_profile"
+              initial={{ y: 80, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              exit={{
+                opacity: 0,
+                y: 90,
+                transition: {
+                  ease: "easeInOut",
+                  delay: 0.4,
+                },
+              }}
+            >
+              Coding Profiles.
+            </motion.a>
+            <motion.a
+              href="/achievement"
+              initial={{ y: 80, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              exit={{
+                opacity: 0,
+                y: 90,
+                transition: {
+                  ease: "easeInOut",
+                  delay: 0.2,
+                },
+              }}
+            >
+              Achievement.
+            </motion.a>
+            <motion.a
+              href="/experience"
+              initial={{ y: 80, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              exit={{
+                opacity: 0,
+                y: 90,
+                transition: {
+                  ease: "easeInOut",
+                  delay: 0.2,
+                },
+              }}
+            >
+              Experience.
+            </motion.a>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <DarkDiv click={click} />
       <Container>
         <LogoComponent theme={click ? "dark" : "light"} />
         <SocialIcons theme={click ? "dark" : "light"} />
 
         <Center click={click}>
-          <YinYang
-            onClick={() => handleClick()}
-            width={click ? 120 : 200}
-            height={click ? 120 : 200}
-            fill="currentColor"
-          />
-          <span>Show Portfolio</span>
+          {!open && (
+            <YinYang
+              onClick={() => handleClick()}
+              width={click ? 120 : 200}
+              height={click ? 120 : 200}
+              fill="currentColor"
+            />
+          )}
+          {!open && <span>Show Portfolio</span>}
         </Center>
-        
+
         <Contact
           target="_blank"
           href="https://www.linkedin.com/in/kunal-shaw-/"
