@@ -71,6 +71,11 @@
     top: 2rem;
     right: calc(1rem + 2vw);
     z-index:2;
+    @media(max-width:768px){
+      font-size:22px;
+      top: 4rem;
+      right: calc(1rem + 2vw);
+    }
     cursor:pointer;
     font-size:18px;
   }

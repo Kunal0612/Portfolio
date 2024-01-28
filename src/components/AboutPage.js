@@ -76,7 +76,6 @@ const Main = styled.div`
     transform: translate(-50%, -50%);
 }
 `;
-
 const AboutPage = () => {
   
   return (
