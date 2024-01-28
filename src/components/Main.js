@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
-import React, { useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, {  useState } from "react";
+import {  NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
-import Home from "../subComponents/Home";
 // import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
+import "./app.scss";
+import { motion, AnimatePresence } from "framer-motion";
 import Intro from "./Intro";
 
 const MainContainer = styled.div`
@@ -33,24 +33,22 @@ const Container = styled.div`
   padding: 2rem;
 `;
 const Navright = styled.div`
-color: ${(props) => props.theme.text};
-position: absolute;
-top: 2rem;
-right: calc(4rem + 2vw);
-text-decoration: none;
-z-index: 5;
-@media (min-width: 1300px) {
-  display:none;
-}
+  color: ${(props) => props.theme.text};
+  position: absolute;
+  top: 2rem;
+  right: calc(1rem + 2vw);
+  text-decoration: none;
+  z-index: 5;
+  @media (min-width: 1300px) {
+    display: none;
+  }
 `;
-
-
 
 const Contact = styled.a`
   color: ${(props) => props.theme.text};
   position: absolute;
   top: 2rem;
-  right: calc(1rem + 2vw);
+  right: calc(4rem + 2vw);
   text-decoration: none;
   z-index: 1;
 `;
@@ -62,7 +60,7 @@ const ABOUT = styled(NavLink)`
   top: 2rem;
   z-index: 3;
   @media (max-width: 1300px) {
-    display:none;
+    display: none;
   }
 `;
 
@@ -74,7 +72,7 @@ const SKILLS = styled(NavLink)`
   top: 2rem;
   z-index: 3;
   @media (max-width: 1300px) {
-    display:none;
+    display: none;
   }
 `;
 const WORK = styled(NavLink)`
@@ -85,7 +83,7 @@ const WORK = styled(NavLink)`
   top: 2rem;
   z-index: 3;
   @media (max-width: 1300px) {
-    display:none;
+    display: none;
   }
 `;
 
@@ -97,7 +95,7 @@ const CODING = styled(NavLink)`
   top: 2rem;
   z-index: 3;
   @media (max-width: 1300px) {
-    display:none;
+    display: none;
   }
 `;
 const ACHIEVEMENT = styled(NavLink)`
@@ -108,7 +106,7 @@ const ACHIEVEMENT = styled(NavLink)`
   top: 2rem;
   z-index: 3;
   @media (max-width: 1300px) {
-    display:none;
+    display: none;
   }
 `;
 
@@ -120,7 +118,7 @@ const EXPERIENCE = styled(NavLink)`
   top: 2rem;
   z-index: 1;
   @media (max-width: 1300px) {
-    display:none;
+    display: none;
   }
 `;
 
@@ -184,13 +182,31 @@ const DarkDiv = styled.div`
 `;
 
 const Main = () => {
-  const [click, setClick] = useState(false);
-  const menuRef = useRef(null);
+  const [open, setOpen] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const toggleMenu = () => {
-    menuRef.current.classList.toggle("show_menu");
+  const isOpen = () => {
+    setOpen(true);
   };
+
+  const closeMenu = () => {
+    setOpen(false);
+  };
+
+  //lets start animation
+  const item = {
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.3,
+        delay: 1.2,
+      },
+    },
+  };
+
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
   return (
     <MainContainer>
       <DarkDiv click={click} />
@@ -207,8 +223,8 @@ const Main = () => {
           />
           <span>Show Portfolio</span>
         </Center>
-        <Navright onClick={toggleMenu}>
-        <motion.h2
+        <Navright onClick={isOpen}>
+          <motion.h2
             initial={{
               y: -150,
               transition: { type: "spring", duration: 1.5, delay: 1 },
@@ -223,6 +239,118 @@ const Main = () => {
             <TiThMenu />
           </motion.h2>
         </Navright>
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              className="menu_container"
+              variants={item}
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "100vh", opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              exit="exit"
+            >
+              <div className="btn_close" onClick={closeMenu}>
+              <TiThMenu />
+              </div>
+              <motion.a
+              href="/about"
+                initial={{ y: 80, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                exit={{
+                  opacity: 0,
+                  y: 90,
+                  transition: {
+                    ease: "easeInOut",
+                    delay: 1,
+                  },
+                }}
+              >
+                About.
+              </motion.a>
+              <motion.a
+                href="/skills"
+                initial={{ y: 80, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.7 }}
+                exit={{
+                  opacity: 0,
+                  y: 90,
+                  transition: {
+                    ease: "easeInOut",
+                    delay: 0.8,
+                  },
+                }}
+              >
+                Skills.
+              </motion.a>
+              <motion.a
+                href="/work"
+                initial={{ y: 80, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                exit={{
+                  opacity: 0,
+                  y: 90,
+                  transition: {
+                    ease: "easeInOut",
+                    delay: 0.6,
+                  },
+                }}
+              >
+                Projects.
+              </motion.a>
+              <motion.a
+                href="/coding_profile"
+                initial={{ y: 80, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                exit={{
+                  opacity: 0,
+                  y: 90,
+                  transition: {
+                    ease: "easeInOut",
+                    delay: 0.4,
+                  },
+                }}
+              >
+                Coding Profiles.
+              </motion.a>
+              <motion.a
+                href="/achievement"
+                initial={{ y: 80, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                exit={{
+                  opacity: 0,
+                  y: 90,
+                  transition: {
+                    ease: "easeInOut",
+                    delay: 0.2,
+                  },
+                }}
+              >
+                Achievement.
+              </motion.a>
+              <motion.a
+                href="/experience"
+                initial={{ y: 80, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                exit={{
+                  opacity: 0,
+                  y: 90,
+                  transition: {
+                    ease: "easeInOut",
+                    delay: 0.2,
+                  },
+                }}
+              >
+                Experience.
+              </motion.a>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <Contact
           target="_blank"
           href="https://www.linkedin.com/in/kunal-shaw-/"
@@ -339,7 +467,6 @@ const Main = () => {
               Achievement.
             </motion.h2>
           </ACHIEVEMENT>
-          
         </BottomBar>
       </Container>
       {click ? <Intro click={click} /> : null}
