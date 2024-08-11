@@ -61,14 +61,7 @@ const Main = styled.div`
 
 `;
 
-const Contact = styled.a`
-  color: ${(props) => props.theme.text};
-  position: absolute;
-  top: 2rem;
-  right: calc(4rem + 2vw);
-  text-decoration: none;
-  z-index: 1;
-`;
+
 
 const Title = styled.h2`
   display: flex;
@@ -113,25 +106,7 @@ const Description = styled.div`
 const MySkillsPage = () => {
   return (
     <ThemeProvider theme={lightTheme}>
-      <Contact
-          target="_blank"
-          href="https://www.linkedin.com/in/kunal-shaw-/"
-        >
-          <motion.h2
-            initial={{
-              y: -150,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FaLinkedinIn />
-          </motion.h2>
-        </Contact>
+      
       <Box>
         <LogoComponent theme="light" />
         <SocialIcons theme="light" />
@@ -161,7 +136,7 @@ const MySkillsPage = () => {
             <Develope width={40} height={40} /> Competitive Programmer 
           </Title>
           <Description>
-            Solved around 3000+ Algorithmic Problems in total of all coding
+            Solved around 42`00+ Algorithmic Problems in total of all coding
             platforms !
           </Description>
           <Description>

@@ -88,7 +88,7 @@ const SubBox = styled.div`
     align-items: center;
     justify-content: center;
     bottom: 2%;
-    left: 35%;
+    left: 36%;
     @media (max-width: 50em) {
         bottom:-1%;
         left: 24%;

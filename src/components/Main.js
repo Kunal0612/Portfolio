@@ -172,9 +172,7 @@ const Center = styled.button`
   }
 `;
 
-const aa = styled.div`
-
-`
+const aa = styled.div``;
 
 const DarkDiv = styled.div`
   position: absolute;
@@ -186,12 +184,12 @@ const DarkDiv = styled.div`
   height: ${(props) => (props.click ? "100%" : "0%")};
   z-index: 1;
   transition: height 0.5s ease, width 1s ease 0.5s;
-  @media (max-width: 50em){
+  @media (max-width: 50em) {
     height: 50%;
     right: 0px;
     width: 100%;
     width: ${(props) => (props.click ? "100%" : "0%")};
-  height: ${(props) => (props.click ? "50%" : "0%")};
+    height: ${(props) => (props.click ? "50%" : "0%")};
     transition: width 0.5s ease 0s, height 1s ease 0.5s;
   }
 `;
@@ -356,7 +354,7 @@ const Main = () => {
       <DarkDiv click={click} />
       <Container>
         <LogoComponent theme={click ? "dark" : "light"} />
-        <SocialIcons  />
+        <SocialIcons />
 
         <Center click={click}>
           {!open && (
@@ -374,20 +372,6 @@ const Main = () => {
           target="_blank"
           href="https://www.linkedin.com/in/kunal-shaw-/"
         >
-          <motion.h2
-            initial={{
-              y: -150,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FaLinkedinIn />
-          </motion.h2>
         </Contact>
         <EXPERIENCE to="/experience">
           <motion.h2

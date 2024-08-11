@@ -4,14 +4,7 @@ import React from "react";
 // import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
 
-const Contact = styled.a`
-  color: ${(props) => props.theme.text};
-  position: absolute;
-  top: 2rem;
-  right: calc(4rem + 2vw);
-  text-decoration: none;
-  z-index: 1;
-`;
+
 
 const Box = styled(motion.a)`
   width: calc(10rem + 15vw);
@@ -98,25 +91,6 @@ const BlogComponent = (props) => {
   const { name, tags, date, imgSrc, link } = props.blog;
   return (
     <Container variants={Item}>
-      <Contact
-          target="_blank"
-          href="https://www.linkedin.com/in/kunal-shaw-/"
-        >
-          <motion.h2
-            initial={{
-              y: -150,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FaLinkedinIn />
-          </motion.h2>
-        </Contact>
       <Box target="_blank" href={`${link}`}>
         <Image img={imgSrc} />
         <Title>{name}</Title>

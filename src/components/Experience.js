@@ -58,13 +58,13 @@ const Main = styled.div`
   }
 `;
 const Grid = styled.div`
-display: grid;
-grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
-grid-gap: calc(1rem + 2vw);
-@media (max-width:50em){
-    grid-template-columns:100%;
-}
-`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
+  grid-gap: calc(1rem + 2vw);
+  @media (max-width: 50em) {
+    grid-template-columns: 100%;
+  }
+`;
 
 const Title = styled.h2`
   display: flex;
@@ -87,14 +87,6 @@ const Title = styled.h2`
   }
 `;
 
-const Contact = styled.a`
-  color: ${(props) => props.theme.text};
-  position: absolute;
-  top: 2rem;
-  right: calc(4rem + 2vw);
-  text-decoration: none;
-  z-index: 1;
-`;
 const Description = styled.div`
   color: ${(props) => props.theme.text};
   font-size: calc(0.6em + 1vw);
@@ -127,52 +119,61 @@ const Description = styled.div`
 const MySkillsPage = () => {
   return (
     <ThemeProvider theme={lightTheme}>
-        <Contact
-          target="_blank"
-          href="https://www.linkedin.com/in/kunal-shaw-/"
-        >
-          <motion.h2
-            initial={{
-              y: -150,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FaLinkedinIn />
-          </motion.h2>
-        </Contact>
       <Box>
         <LogoComponent theme="light" />
         <SocialIcons theme="light" />
         {/* <PowerButton /> */}
         <ParticleComponent theme="light" />
         <Grid>
-        <Main>
-          <Title>Teaching Assistant (CSFORALL) DEC 2023 - Present</Title>
-          <Description>
-            • Served as an Online Teaching Assistant (TA) for multiple DSA and
-            Competitive Programming batches, also reviewed their coursework.
-            <br />• Collaborated with fellow Team members to improve various
-            Course Materials
-          </Description>
-        </Main>
-        <Main>
-          <Title>Teaching Assistant (Ask Senior) JAN 2024 - Present</Title>
-          <Description>
-            • Created CP editorials on an "Ask Senior" platform to aid students
-            with concise and clear explanations of competitive programming
-            problems.
-            <br />
-            • Addressed numerous DSA and CP-related queries, offering
-            solutions and clarifications to aid fellow students in their
-            learning journey.
-          </Description>
-        </Main>
+          <Main>
+            <Title>
+              Problem Setter Intern GeeksForGeeks Jun 2024 - Present
+            </Title>
+            <Description>
+              • Improved the current problems of the platform to provide better
+              user experience
+              <br />• Collaborated with fellow Team members to improve various
+              Course Materials
+            </Description>
+          </Main>
+          <Main>
+            <Title>CP Intern (Hey Coach) JAN 2024 - JUN 2024</Title>
+            <Description>
+              • Created new problems for the platforms to improve user
+              experience.
+              <br />• Addressed numerous DSA and CP-related queries, offering
+              solutions and clarifications to aid fellow students in their
+              learning journey.
+            </Description>
+          </Main>
+        </Grid>
+        <BigTitle text="Experience" top="4%" right="-1%" />
+      </Box>
+      <Box>
+        <LogoComponent theme="light" />
+        <SocialIcons theme="light" />
+        {/* <PowerButton /> */}
+        <ParticleComponent theme="light" />
+        <Grid>
+          <Main>
+            <Title>Teaching Assistant (CSFORALL) DEC 2023 - Present</Title>
+            <Description>
+              • Served as an Online Teaching Assistant (TA) for multiple DSA and
+              Competitive Programming batches, also reviewed their coursework.
+              <br />• Collaborated with fellow Team members to improve various
+              Course Materials
+            </Description>
+          </Main>
+          <Main>
+            <Title>Teaching Assistant (Ask Senior) JAN 2024 - Present</Title>
+            <Description>
+              • Created CP editorials on an "Ask Senior" platform to aid
+              students with concise and clear explanations of CP problems.
+              <br />• Addressed numerous DSA and CP-related queries, offering
+              solutions and clarifications to aid students in their
+              learning journey.
+            </Description>
+          </Main>
         </Grid>
         <BigTitle text="Experience" top="4%" right="-1%" />
       </Box>
